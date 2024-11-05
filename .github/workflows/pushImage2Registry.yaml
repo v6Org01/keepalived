@@ -1,0 +1,23 @@
+name: push_image_to_registry
+
+on:
+  workflow_dispatch:
+  push:
+    branches: ["main"]
+    paths: ["keepalived.conf.env"]
+  repository_dispatch:
+    types: [trigger-wf-pushImage2Registry]
+
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+
+jobs:
+
+  build-image-push:
+    uses: v6Org01/.github/.github/workflows/reusableBuildPush.yaml@main
+    with:
+      APPLICATION: keepalived
+      VERSION: ${{ vars.KEEPALIVED_VERSION }}
+      PUSH_TO_PUBLIC: true
+      PUSH_TO_PRIVATE: false
