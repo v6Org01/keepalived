@@ -6,7 +6,7 @@ RUN <<EOF
   rm -f /var/cache/apk/* /tmp/*
   rm -f /sbin/halt /sbin/poweroff /sbin/reboot
 EOF
-COPY ./entrypoint.sh /tmp/entrypoint.sh
+COPY ./src/docker/entrypoint.sh /tmp/entrypoint.sh
 COPY ./keepalived.conf.env /etc/keepalived/keepalived.conf.env
 RUN chmod o+x /tmp/entrypoint.sh
 ENTRYPOINT ["/tmp/entrypoint.sh"]
