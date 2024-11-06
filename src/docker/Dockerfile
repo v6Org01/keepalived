@@ -1,4 +1,5 @@
-FROM alpine:latest
+ARG REGISTRY
+FROM ${REGISTRY}/alpine:latest
 LABEL maintainer="dev_lau11@a.jlv6.com"
 LABEL os="alpine"
 RUN <<EOF
