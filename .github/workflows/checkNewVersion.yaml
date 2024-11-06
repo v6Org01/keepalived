@@ -20,7 +20,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Set up Docker Buildx
-        uses: v6Org01/sharedActions/setup-buildx-privateRegistry@main
+        uses: v6Org01/.github/actions/setup-buildx-privateRegistry@main
         with:
           REGISTRY: ${{ vars.REGISTRY_PRIVATE_PULL }}
           REGISTRY_USER: ${{ secrets.REGISTRY_PRIVATE_USER01 }}
