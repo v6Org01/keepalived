@@ -15,8 +15,7 @@ concurrency:
 jobs:
 
   build-image-push:
-    uses: v6Org01/k8s/.github/workflows/reusableDeployApp.yaml@main
-    #   uses: v6Org01/reusableWorkflows/.github/workflows/BuildPushImage.yaml@main
+    uses: v6Org01/reusableWorkflows/.github/workflows/BuildPushImage.yaml@main
     with:
       APPLICATION: keepalived
       VERSION: ${{ vars.KEEPALIVED_VERSION }}
