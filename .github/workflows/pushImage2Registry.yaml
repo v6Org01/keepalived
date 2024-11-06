@@ -20,4 +20,4 @@ jobs:
       APPLICATION: keepalived
       VERSION: ${{ vars.KEEPALIVED_VERSION }}
       PUSH_TO_PUBLIC: true
-      PUSH_TO_PRIVATE: false
+      PUSH_TO_PRIVATE: true
