@@ -6,7 +6,7 @@ on:
     branches: ["main"]
     paths: ["keepalived.conf.env"]
   repository_dispatch:
-    types: [trigger-wf-pushImage2Registry]
+    types: ["trigger-wf-pushImage2Registry"]
 
 concurrency:
   group: ${{ github.workflow }}
