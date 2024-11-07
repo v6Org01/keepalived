@@ -17,7 +17,7 @@ jobs:
   build-image-push:
     uses: v6Org01/.github/.github/workflows/BuildPushImage.yaml@main
     with:
-      APPLICATION: keepalived
+      APPLICATION: ${{ vars.APPLICATION }}
       VERSION: ${{ vars.KEEPALIVED_VERSION }}
       PUSH_TO_PUBLIC: true
       PUSH_TO_PRIVATE: true
